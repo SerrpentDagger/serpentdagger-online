@@ -191,6 +191,7 @@ a:hover {
 
 .footer-links li a:hover {
 	color: #ffffff;
+	text-decoration: underline;
 }
 
 .content-main {
@@ -206,9 +207,35 @@ a:hover {
 	color: white;
 }
 
+.content-section img {
+	max-width: 100%;
+	max-height: 60vh;
+	width: auto;
+	height: auto;
+	display: block;
+	margin-bottom: 1.5rem;
+	border-radius: 0.75rem;
+	box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+	break-inside: avoid;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.video-section {
+	position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
 .video-section iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
-	height: 400px;
+	height: 100%;
 	border: none;
 	border-radius: 0.5rem;
 	margin-bottom: 2rem;
@@ -297,6 +324,9 @@ p {
 	border-radius: 0.5rem;
 	font-weight: bold;
 	transition: background-color 0.3s ease;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	font-size: 1.3rem;
 }
 
 .button:hover {
@@ -308,6 +338,12 @@ p {
 	padding: 2rem;
 	max-width: 1500px;
 	margin: 0 auto;
+}
+
+.gallery-main h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1.5rem;
+	color: white;
 }
 
 /* Image layout */
@@ -357,4 +393,14 @@ p {
 	max-width: 90%;
 	max-height: 90%;
 	border-radius: 0.5rem;
+}
+
+.section-divider {
+	border: none;
+	height: 2px;
+	width: 100%;
+	max-width: min(100vw, 1600px);
+	margin: 1rem auto 2rem;
+	background: white;
+	border-radius: 1px;
 }
