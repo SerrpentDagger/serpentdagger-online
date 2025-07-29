@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const grid = document.querySelector(".gallery-grid");
 
-	for (var i = 1; i <= 49; i++) {
+	for (var i = 1; i <= 53; i++) {
 		const img = document.createElement("img");
 		img.src = `/assets/gallery/gi${i}.jpeg`;
 		img.alt = `Gallery image ${i}`;
