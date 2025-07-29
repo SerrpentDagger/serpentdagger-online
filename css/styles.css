@@ -11,15 +11,15 @@ body {
 }
 
 body.home-body {
-	background: url('/serpentdagger-online/assets/images/bg-home.jpg');
+	background: url('/assets/images/bg-home.jpg');
 }
 
 body.content-body {
-	background: url('/serpentdagger-online/assets/images/bg-home.jpg');
+	background: url('/assets/images/bg-home.jpg');
 }
 
 body.list-body {
-	background: url('/serpentdagger-online/assets/images/bg-home.jpg');
+	background: url('/assets/images/bg-home.jpg');
 }
 
 body.gallery-body {
@@ -154,7 +154,7 @@ a:hover {
 
 .site-footer {
 	position: relative;
-	background-image: url('../assets/images/footer-banner.png');
+	background-image: url('/assets/images/footer-banner.png');
 	background-size: cover;
 	background-position: center;
 	color: white;
