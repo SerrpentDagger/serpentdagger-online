@@ -12,5 +12,5 @@ function loadHTML(selector, url) {
 }
 
 // Load header and footer
-loadHTML("#header-placeholder", "/partials/header.html");
-loadHTML("#footer-placeholder", "/partials/footer.html");
+loadHTML("#header-placeholder", "partials/header.html");
+loadHTML("#footer-placeholder", "partials/footer.html");

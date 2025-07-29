@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	for (var i = 1; i <= 53; i++) {
 		const img = document.createElement("img");
-		img.src = `/assets/gallery/gi${i}.jpeg`;
+		img.src = `assets/gallery/gi${i}.jpeg`;
 		img.alt = `Gallery image ${i}`;
 		img.loading = "lazy";
 		grid.appendChild(img);

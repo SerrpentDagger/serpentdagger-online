@@ -11,15 +11,15 @@ body {
 }
 
 body.home-body {
-	background: url('/assets/images/bg-home.jpg');
+	background: url('assets/images/bg-home.jpg');
 }
 
 body.content-body {
-	background: url('/assets/images/bg-home.jpg');
+	background: url('assets/images/bg-home.jpg');
 }
 
 body.list-body {
-	background: url('/assets/images/bg-home.jpg');
+	background: url('assets/images/bg-home.jpg');
 }
 
 body.gallery-body {
