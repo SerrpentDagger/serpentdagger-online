@@ -34,12 +34,20 @@ body::before {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.6); /* adjust for darkness */
+	background-color: rgba(0, 0, 0, 0.6);
 	z-index: -1;
 }
 
 body.content-body::before {
+	content: '';
 	background-color: rgba(0, 0, 0, 0.832);
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-position: center;
 }
 
 a {
@@ -64,6 +72,12 @@ a:hover {
 	background-color: #000;
 	padding: 0.8rem 2rem;
 	border-bottom: 2px solid #111;
+	z-index: 1;
+}
+
+.table-wide {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;	
 }
 
 table {
@@ -89,9 +103,16 @@ th, td {
 .header-right .nav-links {
 	list-style: none;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 1.2vw;
 	margin: 0;
 	padding: 0;
+}
+
+.header-right .nav-links li {
+	flex: 1;
+	text-align: center;
 }
 
 .header-right .nav-links li a {
@@ -174,6 +195,7 @@ th, td {
 	background-size: cover;
 	background-position: center;
 	color: white;
+	z-index: 1;
 }
 
 .footer-overlay {
