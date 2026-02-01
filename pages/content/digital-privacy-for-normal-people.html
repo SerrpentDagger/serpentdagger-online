@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<title>Reclaim Privacy</title>
+	<base href="/">
+	<link rel="stylesheet" href="css/styles.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body class="content-body">
+	<div id="header-placeholder"></div>
+
+	<main class="content-main">
+		<h2 class="warning">WARNING: I'm still refining this page and advice a bit, checking for things I may have overlooked. (Mainly in the OS section)</h2>
+		<h1>Reclaim Your Digital Privacy</h1>
+		<hr class="section-divider">
+
+		<section class="content-section">
+			<p>
+				If you're a normal person who wants to reclaim your digital privacy, then this page is for you.
+				If instead you're somebody whose actual wellbeing depends on anonymity in a very real way, you should take a look at <a href="/pages/content/digital-privacy-for-normal-people.html#anon-inf">these projects</a>,
+				and preferrably put your phone and any incriminating hard drives through a <a href="https://tails.net/doc/encryption_and_privacy/secure_deletion/index.en.html#destroy">good-quality blender</a>.
+			</p>
+			<img src="assets/images/digital-privacy/reclaim-digital-privacy.jpeg" alt="Reclaim digital privacy">
+			<p>
+				You're probably already aware that companies and governments are gathering extensive portfolios on you from everything you do with your computer, and using it in all
+				kinds of <a href="https://www.whonix.org/wiki/The_World_Wide_Web_And_Your_Privacy">nasty ways</a>.
+				Below I'll give a very accessible explanation of where you need to be protecting your data in order to reclaim your privacy,
+				and then the clear, actionable steps you should take in order to actually do that, all in one place.
+			</p>
+			<p>I'll focus mostly on computers here, but the ideas apply just as well to phones later down the line, so I'll include some mobile examples as a teaser.<p>
+			<p>
+				You don't need to be a tech expert, you don't need to make big sacrifices on quality or usability, and you don't need to do it all at once:
+				I've laid it out so that the easy stuff comes first, and the stuff that would have been hard later becomes easy because of it.
+				The idea is that you'll make some chages, come back to the video, and then make some more as you have time.
+			</p>
+			<p>You'll gradually reclaim your privacy, and as a bonus you'll get better security and digital freedom too!, since these three are all very closely linked.</p>
+		</section>
+		
+		<h1 id="context">Context</h1>
+		<hr class="section-divider">
+		<section class="content-section">
+			<p>
+				Now in order to patch the data leaks, you need to know where they are, so I've divided an average person's digital life into the chunks where their information could be stolen:
+			</p>
+			<img src="assets/images/digital-privacy/levels-of-data-protection.jpeg" alt="The places your data can be stolen">
+			<p>
+				I know that looks like a lot, but these five concepts are all the technical knowledge you'll need, and we'll take them on one by one and learn as we go.
+			</p>
+			<p>
+				The key to privacy is switching each of these things to a trustworthy replacement, because the sad fact of the matter is that we
+				can only ensure control of our computer and data if we switch away from using disreputable services at all. Privacy settings are worth setting, but it's unfortunately
+				not enough to just mark some preferences that can be ignored — if the theif has your key, you can't just pin a note to the door;
+				you need to change the lock.
+			</p>
+			<p>
+				I know it can be a lot of work to figure out what is trustworthy and what isn't, and the sheer number of options can be overwhelming,
+				so as we go through these categories I'll give you my personal suggestions on what to use that is both of quality and which will respect your privacy. There are other good options, but here's somewhere to start.
+				All of the suggestions will be 'Open-Source', which means they have public code so that the community can see exactly what they do and how.
+				And all will be free except for the VPN service, but that comes later anyway.
+			</p>
+			<p>
+				Note that I'm not sponsered in any way by any of these projects.
+				This is just the best advice I myself am able to give you, as a privacy-minded developer who's been digging down this rabbit hole for several years.
+			</p>
+			<p>
+				Much of the advice on this page revolves around downloading and installing applications.
+				If you aren't sure how to do that, you can check the corresponding video for Mac or Windows in one of the folding sections below.
+			</p>
+			<a class="collapse">Mac Instructions</a>
+			<div class="collapse-content">
+				<h2>Mac Program Installation</h2>
+				<hr class="section-divider">
+				
+				<p>Installation of programs on Mac is simple, and this video will show you how to do it.</p>
+				<section class="video-section">
+				<iframe src="https://www.youtube.com/embed/vHdoYbrWQiY?start=25"
+						title="Mac Instructions"
+						allowfullscreen></iframe>
+				</section>
+			</div>
+			<a class="collapse">Windows Instructions</a>
+			<div class="collapse-content">
+				<h2>Windows Program Installation</h2>
+				<hr class="section-divider">
+				
+				<p>Installtion of programs should be simple, but Windows has started blocking users from putting their own software on their own computer. Follow the simple step in this video to disable that behaviour.</p>
+				<section class="video-section">
+				<iframe src="https://www.youtube.com/embed/Ki5ui894IsE"
+						title="Windows Instructions"
+						allowfullscreen></iframe>
+				</section>
+				<p>Then you can install software as normal by following the steps in this video:</p>
+				<section class="video-section">
+				<iframe src="https://www.youtube.com/embed/J-UUJH_3eGg?start=34"
+						title="Windows Instructions"
+						allowfullscreen></iframe>
+				</section>
+			</div>
+			<p>We'll work basically from the top of the pile down. That will make it easy to switch out each coming layer, because we'll have already chosen the right things to put on top of it.</p>
+		</section>
+		
+		<h1 id="browser">Browser</h1>
+		<hr class="section-divider">
+		<section class="content-section">
+			<p>
+				The first thing I recommend you change is actually your browser. This is the app you open when you want to browse the internet, and you probably know it as
+				chrome, safari, edge or firefox.
+				The browser you use has a huge amount of power over your digital life: it sees everything you do as you're looking around online; every single mouse movement, keystroke, link and click.
+				It can either protect you from the websites you visit, or collaborate with them to violate your trust.
+			</p>
+			<img src="assets/images/digital-privacy/your-browser-is-watching-you.jpeg" alt="Your browser is watching you">
+			<p>
+				First a word about usage: a lot of people leave many tabs open and rarely close their browsers. This is problematic for privacy, security, and I would argue even productivity.
+				Apart from being hard to find things in the giant mess of tabs, by accumulating such a pile you give all those websites the chance to communicate in the background
+				through third-party tracking services provided by google and facebook, among others. And the longer they're open, the longer they can do their thing.
+				Instead, you should bookmark tabs you don't want to loose, saving them in folders at the top bar, and close and clear the data often. My browser recommendation makes that easy.
+			</p>
+			<p>
+				I would say <a href="https://mullvad.net/en/browser">Mullvad Browser</a> should be your default for everything. <a href="https://support.torproject.org/mullvad-browser/faqs/">[See: Tor on Mullvad]</a>
+				It does a <a href="https://privacytests.org/">great deal</a> to protect you from trackers, and can later be combined with their VPN to mask your location.
+				As a tiny tip-of-the-iceberg example, it blocks off many ways websites use to communicate in the background, and clears your data automatically every time you close it or push this button.
+				Mullvad has an <a href="https://en.wikipedia.org/wiki/Mullvad">excellent track record</a> when it comes to data protection.
+			</p>
+			<p>
+				Despite all that, note that your ISP will always be able to see which websites your computer is communicating with unless you're also using Tor or a VPN.
+				Don't worry, we'll talk about that later. For now, this is already an easy way to improve the situation by removing websites' access to a lot of their spy toolbox.
+			</p>
+			<p>
+				When switching to Mullvad, you may notice some websites 'stop working'. This is actually a testament to Mullvad's success, because the website is
+				actively blocking people it can't steal data from. In this case you should check a less scummy website if possible, which becomes a consequence for the first one that then loses a visit.
+			</p>
+			<p>
+				For the case of online banking, or for other websites which require a more 'delicate' touch, I would also install and keep Brave around, but only use this in 'private mode' (and not the tor version with banks).
+				If you do want to use Tor for anonymous browsing, use the Tor browser itself, and <a href="https://support.torproject.org/tor-browser/general/vpn-with-tor/">seperately from a VPN</a>.
+				We'll talk about that later.
+			</p>
+			<p>
+				On mobile, you should use Brave, unless Vanadium is available on your phone, in which case use that.
+			</p>
+		</section>
+		
+		<h1 id="accounts">Accounts</h1>
+		<hr class="section-divider">
+		<section class="content-section">
+			<p>
+				Accounts, then. This is when you log into something online, like gmail or social media.
+				Generally you should avoid logging in whenever possible, since doing so tells whatever service you're using <i>exactly</i> who you are.
+				Never use the options to link your accounts together, like logging into a new service with your Google account, for example.
+			</p>
+			<img src="assets/images/digital-privacy/dont-link-your-accounts-together.jpeg" alt="Don't link your accounts together">
+			<p>
+				That makes it trivial for the companies to link together your activity on the different sites, and represents a security threat of having everything protected by one account.
+				Instead, make a new account for every new account you want. Seems reasonable, right? Even if you do this, however, companies will still link up your activity in the background
+				by using other identifiers like your email and phone number, as well as whatever data they can scrape from your internet connection or browser.
+			</p>
+			<p>
+				You should never give out your phone number for account creation if at all possible, and reputable services will rarely require it.
+			</p>
+			<h2 id="acc-email">Email</h2>
+			<p>
+				Another important mitigation technique for this kind of account correlation is to use DuckDuckGo's <a href="https://duckduckgo.com/duckduckgo-help-pages/email-protection/what-is-duckduckgo-email-protection">email service</a>.
+				You can generate a different random email to use for each account, and they all send the mail they receive to the email address you actually use, after removing trackers.
+				Using a different email for each account makes it harder for them to be linked together, which is good for security as well as privacy. Other information you give to the site,
+				however, could still be used to identify you, and all of your activity will still of course be linked together under that random email.
+			</p>
+			<p>
+				DuckDuckGo <a href="https://duckduckgo.com/email/privacy-terms">doesn't collect or store your data</a>.
+				To set up DuckDuckGo's email service, and to generate new random emails with it, you need to use either their browser extension or app.
+				These are all open-source. I find it convenient to install their browser app on my phone and use it exclusively as an email-generator by keeping the tab open,
+				while using Vanadium as my actual browser.
+			</p>
+			<p>
+				Do note that email is <a href="https://www.whonix.org/wiki/E-Mail">inherently flawed</a>, and should not be considered private or secure.
+				If you want to communicate sensitive information to someone, you should use <a href="https://signal.org/">Signal</a> instead.
+			</p>
+			<p>
+				That said, I recommend you switch to <a href="https://account.proton.me/signup">ProtonMail</a>, which will offer a meaningful improvement to your privacy over the webmail most people use.
+				They offer a good free tier, strip some trackers from your emails, and are very user-friendly.
+				<a href="https://en.wikipedia.org/wiki/Comparison_of_webmail_providers">Unlike</a> google, outlook and yahoo, they <a href="https://proton.me/mail/privacy-policy">don't</a> track or monetarily expliot the contents of your emails.
+			</p>
+			<p>
+				They also have a suite of other web services that may interest you to replace google services. That includes collaborative document editing and storage.
+				If you've already set up DuckDuckGo, you can now change the forwarding address to your proton address. Then set up a forwarding rule in gmail or outlook to route mail to a new random duck email.
+				Now all the mail you get to your old address will be sent on to your ProtonMail account with trackers removed. At this point you can continue, but whenever you now
+				get an email from your old address, go and switch the source account to use a new random duck email, to avoid google seeing all of your mail as a man-in-the-middle.
+			</p>
+			<h2 id="acc-other">Other</h2>
+			<p>
+				For AI queries, use <a href="https://duck.ai/">duck.ai</a>. You can choose from a bunch of models, and your requests will be anonymised by sending them through DuckDuckGo.
+				No need to sign up with personal details, and your conversations <a href="https://duckduckgo.com/duckai/privacy-terms">won't be used for training</a>.
+			</p>
+			<p>
+				For YouTube viewing, you should use <a href="https://freetubeapp.io/">FreeTube instead</a>. It will allow you to watch youtube videos fairly privately, especially if you couple it with a VPN later.
+				All of your history and subscriptions are kept on your own computer, instead of being tracked by google.
+				Another option is to watch YouTube through mullvad without logging in, and restart the browser before and after each session.
+				That doesn't involve installing anything, so it's easy, but you don't get a history or subscriptions.
+			</p>
+			<p>
+				For a map of the world, use <a href="https://www.openstreetmap.org/">OpenStreetMaps</a> instead of Google maps.
+			</p>
+			<p>
+				I don't personally use social media except for messangers, because doing so is intrinsically not private. That said, <a href="https://mastodon.social/explore">Mastadon</a> is a good replacement to twitter,
+				and for messaging or calls I recommend <a href="https://signal.org/download/">Signal</a>.
+				I do have a facebook marketplace account using a random duck email, but have only logged in when there is something I specifically want to buy. The same goes for Amazon and Ebay.
+				In general I would advise limiting social media use for more reasons than just <a href="https://www.whonix.org/wiki/The_World_Wide_Web_And_Your_Privacy">privacy</a>,
+				but the less you use the platform, the less information you give them.
+			</p>
+			<p>
+				That said, if you <i>do</i> publish personal photos or stories on social media, go through the privacy settings of the service in question to limit how that information is spread.
+				Don't expect this to stop the all-prevalent automated analysis and profiling of who you are as a person, but it can at least <a href="https://ssd.eff.org/module/how-to-manage-your-digital-footprint#minimize-your-publicly-available-data">make it harder</a> for private or corperate stalkers
+				to nose their way into your life.
+			</p>
+		</section>
+	
+		<h1 id="programs">Programs</h1>
+		<hr class="section-divider">
+		<section class="content-section">
+			<p>
+				Programs are the apps you have installed. They're the different tools you have for getting work done and interacting with files. Your browser is also a program. So are games.
+				Depending on what you do with your computer, there are lots of programs you might want to use, so instead of going through all of my recommendations in detail, I put together the following table.
+			</p>
+			<p>
+				It has the category of the program, an example of a popular closed-source option, and my suggested open-source replacement.
+				I also have some suggestions for mobile apps, where applicable, but my focus here is on desktop computing.
+			</p>
+			<table border="1">
+				<thead>
+					<tr>
+						<th>Program Type</th>
+						<th>Example</th>
+						<th>Computer Replacement</th>
+						<th>Phone Replacement</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Browser</td>
+						<td>Chrome</td>
+						<td><a href="https://mullvad.net/en/download/browser/">Mullvad</a></td>
+						<td><a href="https://github.com/GrapheneOS/Vanadium/">Vanadium</a></td>
+					</tr>
+					<tr>
+						<td>Document Editing</td>
+						<td>MS Office</td>
+						<td><a href="https://www.libreoffice.org/download/download-libreoffice/">LibreOffice</a></td>
+						<td>LibreOffice Viewer</td>
+					</tr>
+					<tr>
+						<td>Image Editing</td>
+						<td>Adobe Photoshop</td>
+						<td colspan=2><a href="https://www.gimp.org/downloads/">Gimp</a> (Editing), or <a href="https://www.darktable.org/install/">Darktable</a> (Photography)</td>
+					</tr>
+					<tr>
+						<td>Password Manager</td>
+						<td>Bitwarden</td>
+						<td><a href="https://keepassxc.org/download">KeePassXC</a></td>
+						<td><a href="https://www.keepassdx.com/">KeePassDX</a></td>
+					</tr>
+					<tr>
+						<td>Cross-Platform Files</td>
+						<td>AirDrop</td>
+						<td><a href="https://localsend.org/download">LocalSend</a></td>
+						<td>LocalSend</td>
+					</tr>
+					<tr>
+						<td>Live File-Sync</td>
+						<td>DropBox</td>
+						<td colspan=2><a href="https://syncthing.net/downloads/">SyncThing</a></td>
+					</tr>
+					<tr>
+						<td>Encrypted Cloud</td>
+						<td>-</td>
+						<td><a href="https://cryptomator.org/downloads/">Cryptomator</a></td>
+						<td>Cryptomator</td>
+					</tr>
+					<tr>
+						<td>Digital Art</td>
+						<td>CorelDRAW</td>
+						<td colspan=2><a href="https://inkscape.org/en/release/">Inkscape</a> (Vector), or <a href="https://krita.org/en/download/">Krita</a> (Painting/Animation)</td>
+					</tr>
+					<tr>
+						<td>YouTube Viewer</td>
+						<td>The website</td>
+						<td><a href="https://freetubeapp.io/#download">FreeTube</a></td>
+						<td><a href="https://newpipe.net/">NewPipe</a></td>
+					</tr>
+					<tr>
+						<td>Messaging/Calls</td>
+						<td>WhatsApp</td>
+						<td><a href="https://signal.org/download/">Signal</a></td>
+						<td>Signal</td>
+					</tr>
+					<tr>
+						<td>Video Player</td>
+						<td>Windows Media-Player</td>
+						<td><a href="https://www.videolan.org/vlc/#download">VLC</a></td>
+						<td>VLC</td>
+					</tr>
+					<tr>
+						<td>Video Editing</td>
+						<td>AdPremPro</td>
+						<td><a href="https://kdenlive.org/download/">Kdenlive</a></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Recording/Streaming</td>
+						<td>Streamlabs</td>
+						<td><a href="https://obsproject.com/download">OBS Studio</a></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>3D Animation</td>
+						<td>Adobe After Effects</td>
+						<td><a href="https://www.blender.org/download/">Blender</a></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>CAD</td>
+						<td>AutoCAD</td>
+						<td><a href="https://www.freecad.org/downloads.php?lang=en">FreeCAD</a></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>DAW</td>
+						<td>WavePad</td>
+						<td colspan=2><a href="https://community.ardour.org/download">Ardour</a> (Advanced), or <a href="https://lmms.io/download/">LMMS</a> (Simpler)</td>
+					</tr>
+					<tr>
+						<td>E-Books</td>
+						<td>Amazon Kindle</td>
+						<td><a href="https://johnfactotum.github.io/foliate/">Foliate</a> (Linux-only)</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>PDF-Arranging</td>
+						<td>-</td>
+						<td><a href="https://github.com/pdfarranger/pdfarranger/releases">PDF-Arranger</a> (Linux/Windows-only)</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Markdown</td>
+						<td>Typora</td>
+						<td><a href="https://world.pages.gitlab.gnome.org/apostrophe/">Apostrophe</a> (Linux-only)</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>LaTeX</td>
+						<td>-</td>
+						<td><a href="https://www.xm1math.net/texmaker/download.html">Texmaker</a></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Virtual Machines</td>
+						<td>-</td>
+						<td><a href="https://virt-manager.org/">Virtual-Machine Manager</a> (Linux-only)</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Statistics</td>
+						<td>SPSS</td>
+						<td><a href="https://www.jamovi.org/">Jamovi</a></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Disc-Encryption</td>
+						<td>BitLocker</td>
+						<td><a href="https://veracrypt.jp/en/Downloads.html">VeraCrypt</a></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td colspan=4><a href="https://gist.github.com/RoyasDev/3a34facdd701f291c02c2a185f90cab5">Game Development Resources</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 id="prog-download">Downloading Programs</h2>
+			<p>
+				When downloading a program you want to install, you may have to choose from a couple different versions.
+				These different versions correspond to different combinations of what are called operating systems and cpu architectures, which are important for whether or not the program will work.
+			</p>
+			<p>
+				You probably know whether you're running Windows or Mac OS, and that's the operating system part, but you might not know what cpu architecture you have.
+				Chances are it's 64-bit, which is called Intel on Macs, but you can check in your computer's settings menu, and I'll link a video for Windows and Mac that shows you where to look.
+			</p>
+			<a class="collapse">Mac Instructions</a>
+			<div class="collapse-content">
+				<h2>Mac CPU Check</h2>
+				<hr class="section-divider">
+				
+				<section class="video-section">
+				<iframe src="https://www.youtube.com/embed/MHAm3tWZAdM"
+						title="Mac Instructions"
+						allowfullscreen></iframe>
+				</section>
+			</div>
+			<a class="collapse">Windows Instructions</a>
+			<div class="collapse-content">
+				<h2>Windows CPU Check</h2>
+				<hr class="section-divider">
+
+				<section class="video-section">
+				<iframe src="https://www.youtube.com/embed/SyrigmTBEgI"
+						title="Windows Instructions"
+						allowfullscreen></iframe>
+				</section>
+			</div>
+			<p>
+				Using the wrong installer won't work properly, so if you get stuck just try the 64-bit or Intel version and see if you guessed right.
+				If the program installs and works properly, then it was the right installer.
+			</p>
+			<h2 id="prog-choose">Choosing Programs</h2>
+			<p>
+				The key when it comes to choosing programs is to use established 'open-source' ones. If you remember from earlier, that means anybody can look to make sure the app is doing exactly what it's supposed to do.
+				To check if a project is 'established' or not, you can look it up on 'GitHub', which is a platform where people collaborate on open-source projects.
+				If the project has around a thousand stars or more, it's quite well established, but it never hurts to check other reviews or forum discussions if you want to.
+			</p>
+			<p>
+				Happily, these programs are also almost always free, although donations are appreciated. The open way of working basically removes all options for unscrupulous behaviour or moneygrabbing.
+				If someone suggests a bad change, it will be rejected. If the main team starts ruining the program, we can copy it and not do that.
+				The only motivation is to build a good project together that does the stuff we need done, well. That's the motivation behind these choices.
+			</p>
+			<img src="assets/images/digital-privacy/open-source-community-trust.jpeg" alt="Open-source community collaboration">
+			<p>
+				Note that you may need to be open to learning new things here, since the workflow might differ between programs.
+				But in the end it will be worth it, because you'll have the peace of mind of knowing that you can trust your tools, you can have a say in how they're developed in the future,
+				and you'll never have to pay another scummy software subscription again! How's that for incentive, eh?
+			</p>
+			<h2 id="prog-mig">Migrating Workflows</h2>
+			<p>
+				When switching programs, you don't necessarily have to migrate all of your old projects to the new programs all at once.
+				That could be tricky, since the project files from one program might not load in a different one.
+				Instead you should keep both programs installed while you transition, and try to start just the <i>new</i> projects in the new program.
+				That way you'll eventually have all of your active projects in the new program, with minimal frustration.
+			</p>
+			<p>
+				Remember: each change helps, and you can do this step-by-step. It will be easier to start with the tools you use the least, and then transition gradually with the ones you use daily.
+			</p>
+			<h2 id="prog-games">Gaming</h2>
+			<p>
+				Games are a particularly problematic type of program, because they are nearly all 'closed-source'.
+				That means we can't know what they're actually doing, which makes them inherently untrustable. This is then made abundantly clear if you ever read a game's privacy policy:
+				 they do the same things we expect these days from all other disreputable companies.
+				The best thing to do about this would be to have a seperate computer used only for gaming. For those of us that don't have that option,
+				we can get comparable protection by 'dual-booting'. I'll explain this more in the section on operating systems a little later.
+			</p>
+			<img src="assets/images/digital-privacy/cant-trust-closed-source-games.jpeg" alt="Closed source games can't be trusted">
+			<p>
+				For now, I recommend avoiding <a href="https://levvvel.com/games-with-kernel-level-anti-cheat-software/">games with</a> low-level anti-cheat software, and games which require services that run in the background even when the game isn't active.
+				Both of those things add cumbersome extra work for your computer, potentially slowing things down and introducing bugs, and they give malware more options to infect your system. <a href="https://levvvel.com/what-is-kernel-level-anti-cheat-software/">[See: Info on kernal-level]</a>
+				Many anti-cheat programs also reduce personal freedom by explicit design or by necessity, when it comes to software or operating system choice.
+			</p>
+			<p>
+				If you're not sure about a game, you can check <a href="https://levvvel.com/games-with-kernel-level-anti-cheat-software/">this list</a> from Levvvel or also <a href="https://areweanticheatyet.com/">areweanticheatyet.com</a>.
+				What that site tells you is actually not how invasive the anti-cheat software is, but instead which games with anti-cheat software run on the Linux operating systems.
+				If you don't know what an operating system is, don't worry, we'll get to that in a minute.
+				Just know that this is important for three reasons:
+				<ol>
+					<li>The end-game of this page is switching to Linux for its privacy, performance, freedom, and quality-of-life benefits.</li>
+					<li>Support for Linux demonstrates a certain level of respect for the consumer's preferences that some games notably lack.</li>
+					<li>If the anti-cheat runs on Linux, it probably doesn't integrate itself as deeply into your system, which is good.</li>
+				</ol>
+			</p>
+			<p>
+				When a game says 'denied' on the site, that means the company in charge made an explicit decision to block Linux users.
+				My personal opinion is that if a game doesn't respect my choices when it comes to how I want to set my computer up, then I'll play something else.
+			</p>
+		</section>
+
+		<h1 id="os">Operating System</h1>
+		<hr class="section-divider">
+		<section class="content-section">
+			<p>
+				The operating system is like the virtual environment that your programs live in.
+				You probably recognise the operating systems android, Mac OS and Windows, but there are others, like Linux.
+				These systems gives apps a way of interacting with things like your screen and hard drive, and it gives you ways of interacting with the programs by using things like your mouse and keyboard.
+			</p>
+			<img src="assets/images/digital-privacy/os-is-glue-person-machine-software.jpeg" alt="The OS is the glue between person, machine, and software">
+			<p>
+				Much like your browser's relationship to what you do online, your operating system has complete control over, and knowledge of everything you do with programs in it.
+				That's a huge amount of power, so it's incredibly important that we can trust our operating system. Unfortunately, <a href="https://itsfoss.com/linux-market-share/">most people can't</a>.
+				The overwhelming majority of people use Windows or other closed-source operating systems, and Windows is notoriously aweful when it comes to respecting the privacy and freedom of its users.
+				MacOs may be marginally better, but still suffers from the same problems of unknown code combined with monetary incentives to abuse user privacy.
+			</p>
+			<p>
+				That's why the crux of this video is switching to Linux. Linux is open-source and community-driven, so we know it's trustworthy.
+				Because it lacks all of the tracking software and anti-features that Windows and Mac OS have, Linux also <a href="https://thebatterytips.com/battery-specifications/does-linux-give-longer-battery-life/">often</a> gives you better performance and longer battery life, while using less RAM and powering on much faster.
+				Linux tends to have much better support for older computers than Windows, so if you're stuck unable to upgrade to the next Windows version, you should absolutely switch now for free instead of buying a new computer.
+				And the fact that Linux is community-built guarantees that it will never take advantage of its users. There's no company to benefit from that, and the users are the developers.
+			</p>
+			<p>
+				There are lots of varieties of Linux, called 'distributions', which can be confusing for newcomers.
+				Basically all of them are good, but to make it simple for you I suggest you use the distribution called '<a href="https://zorin.com/os/">Zorin OS</a>'.
+				You can try it to make sure everything works before installing it, you can choose from familiar desktop layouts to make the transition more intuitive, and it includes some nice
+				compatibility tools that I think many new users will appreciate.
+			</p>
+			<p>
+				Zorin is based on Ubuntu, which itself is based on Debian. Those are very popular, well-known systems for which it's easy to find help or tutorials online.
+				If you get stuck, just look for 'how to XYZ zorin', or 'how to xyz ubuntu', and you'll soon find your solution.
+			</p>
+			<p>
+				<a href="https://www.youtube.com/watch?v=KhfBGqLaD5g">Here</a> is a video where a fresh Zorin OS installation is tested to see that it doesn't upload your data.
+			</p>
+			<p>
+				When switching to Linux, one of the things that trips people up is indeed 'compatibility issues'; meaning things you expect to work don't.
+				Linux actually has astonishingly good compatibility for programs that aren't designed to run on it, thanks to impressive community inginuity, and a boost from valve.
+				But if you've already taken my previous steps, you shouldn't have trouble here at all, because all of that advice shifts your workflow and program choices to be entirely Linux-friendly.
+			</p>
+			<img src="assets/images/digital-privacy/state-of-linux-compatibility.jpeg" alt="State of compatibility in Linux">
+			<p>
+				On Zorin, for example, you can install every one of my previous program recommendations directly from the <a href="https://help.zorin.com/docs/apps-games/install-apps/">software center</a>.
+			</p>
+			<p>
+				The only exception here is the certain games you might still want to play that block Linux, so here's a chart for how to set things up based on your needs:
+			</p>
+			<h2 id="os-setup">System Setup and Gaming</h2>
+			<p>
+				Where the table recommends two operating systems, this is referring to what's called 'dual-booting'. That's when you have two different operating systems installed
+				simultaneously on your machine, and you can switch between them by restarting. Linux has good support for doing this kind of thing, so these options are quite easy to set up.
+			</p>
+			<p>
+				Windows, on the other hand, especially Windows 11, will actively seek out and murder any other operating systems it finds itself to share a computer with, so dual-booting Windows and Linux is
+				unfortunately only an option for those of you who <a href="https://www.youtube.com/watch?v=HSZKouwQm9Y">really know what you're doing</a>.
+			</p>
+			<p>
+				If you absolutely can't sacrifice the few games that aren't compatible (<a href="https://areweanticheatyet.com/">check</a> first!), you should instead get a cheap second-hand computer for work,
+				and put Zorin on that instead. That's also a good option if you're unsure about the switch and want to try Linux for a while before committing —
+				I found people selling reasonabe laptops for under 100€ locally, probably because of Windows' lack of support.
+			</p>
+			<p>
+				In the context of privacy, using a seperate computer or dual-booting lets you isolate the untrustworthy Windows or game environment from your work environment.
+			</p>
+			<img src="assets/images/digital-privacy/dual-booting-protects-privacy.jpeg" alt="Dual-booting protects privacy">
+			<p>
+				The dual-booting strategy for protecting privacy is most effective when you encrypt the operating system you intend to use for work, and use a different password for each system.
+				This means that the system you don't trust can't read data stored on the work system.
+				But by encrypting your work system you make it harder to recover from hard-drive or system failures, which is why I don't recommend it by default unless you're comfortable handling regular backups of your data.
+				Using regular backups is something you can absolutely learn to do, and should really be doing anyway, especially since Zorin includes a nice program for it right out of the box,
+				but that's a topic for another day.
+			</p>
+			<h2 id="os-preflight">Before Switching Operating System</h2>
+			<p>
+				Unless you opt to put Zorin on a seperate computer, you will need to back up your important files once before making operating system changes.
+				What that means is you need to know where your important files are, and copy them onto an external hard drive.
+				This is because when we install a new operating system, all data on the computer will be erased. So you need to move the data you care about off the computer first.
+			</p>
+			<p>
+				If you've been working on projects or downloading files, you probably know where those are, but it can be less clear where to find game saved data or other program-specific files like settings,
+				because those files are automatically generated. There are some standard locations to look first
+			</p>
+			<table border="1">
+				<thead>
+					<tr>
+						<th>Mac Os</th>
+						<th>Windows</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<p>/Applications/</p>
+							<p>/Users/<YourUsername>/Applications/</p>
+							<p>/Library/</p>
+							<p>/Users/<YourUsername>/Library/</p>
+						</td>
+						<td>
+							<p>C:\Program Files\</p>
+							<p>C:\Program Files (x86)\</p>
+							<p>C:\Users\YOURNAME\AppData\Local\</p>
+							<p>C:\Users\YOURNAME\AppData\Roaming\</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				but in the end where they're stored depends on the program and operating system, so if you're having trouble finding a certain set of files you should
+				look up that progam on your operating system specifically.
+			</p>
+			<p>
+				If you have important files that were produced by Windows- or Mac-specific tools, you should make sure you can open them with one of my recommended programs,
+				or else convert them to Linux-friendly formats to ensure you maintain access to those files after the switch.
+			</p>
+			<img src="assets/images/digital-privacy/backup-your-files-before-os-switch.jpeg" alt="Backing up files is very important">
+			<p><b>
+				If you have an encrypted external hard drive which was encrypted with Windows- or Mac-specific tools, you should look up whether that drive can be accessed on Linux.
+				If not, you'll need to use the tool which originally encrypted the drive to decrypt or copy the contents to an unencrypted location before switching operating systems, and use VeraCrypt to
+				re-encrypt the drive instead.
+			</b></p>
+			<h2 id="os-install">Installation</h2>
+			<p>
+				I intend to upload videos covering each of these scenarios explicitly in the future, but for now I'll just refer you to the extensive and straightforward documentation on Zorin's own site,
+				along with the many YouTube videos covering how to install Linux.
+				<ul>
+					<li><a href="https://help.zorin.com/docs/getting-started/system-requirements/">System requirements</a></li>
+					<li><a href="https://help.zorin.com/docs/getting-started/error-while-installing-zorin-os/">Pre-Install Checklist</a></li>
+					<li><a href="https://help.zorin.com/docs/getting-started/install-zorin-os/">Installation</a></li>
+					<li><a href="https://help.zorin.com/docs/apps-games/windows-app-support/">Windows App-Support</a></li>
+					<li><a href="https://help.zorin.com/docs/apps-games/play-games/">Gaming</a></li>
+				</ul>
+			</p>
+			<p>
+				For mobile, <a href="https://grapheneos.org/">Graphene OS</a> is really the only option I'm aware of for privacy and security. You can learn more about it on <a href="https://www.youtube.com/@sideofburritos/videos">Side of Burritos'</a> channel.
+			</p>
+		</section>
+		
+		<h1 id="network">Network Connection</h1>
+		<hr class="section-divider">
+		<section class="content-section">
+			<p>
+				When I say 'network connection' here, I'm talking about the way your computer itself accesses the internet. An example would be a VPN.
+				That's a bit different from a browser or other programs we've talked about, because the network connection is part of that underlying envoronment that all your programs live in.
+				It's like an invisible pipe that connects your computer to the internet, and if any of your programs, like your browser, want to <i>access</i> something on the internet, they'll have to go through the pipe.
+			</p>
+			<p>
+				If you're using the internet, say to look at a website, what's happening is that there's information being exchanged between you and the website.
+				That has to happen somehow, and you're paying a company to make it happen. The company is called an ISP, for Internet Service Provider, and you can think of them
+				as a post-office of the internet, except a lot less reputable. They might read your letters if you use HTTP envelopes,
+				and they'll keep a <a href="https://www.whonix.org/wiki/Data_Collection_Techniques#IP_Address">history</a> of all the website-people you've ever corresponded with.
+			</p>
+			<img src="assets/images/digital-privacy/isp-tracks-all-websites-you-visit.jpeg" alt="ISP tracks all your website visits">
+			<p>
+				By using this system as-is, you're also leaving a return address on every bit of internet communication your computer makes, letting websites and other services know who sent the letter.
+			</p>
+			<p>
+				Your options to avoid this are Mullvad VPN or Tor, and I would recommend Mullvad VPN.
+				Before you consider installing either of these tools, though, I should mention that in certain countries,
+				like China, Russia, Turkey, Iran, North Korea, the UAE, or Saudi Arabia, use of a VPN or especially Tor may be subject to censorship or even <a href="https://legalclarity.org/is-it-illegal-to-use-tor-what-the-law-says/">legal consequences</a>.
+				In most countries it's totally fine, but please <a href="https://www.cyberly.org/en/is-using-tor-legal-in-my-country/index.html">check</a> before you go further.
+			</p>
+			<h2 id="net-vpn">VPN Choice</h2>
+			<p>
+				I suggest specifically Mullvad because it does a <a href="https://www.kau.se/en/news/cybersecurity-researcher-have-developed-new-protection-against-ai-analysis">better job</a> of keeping your ISP from knowing who you communicate with,
+				and has a much better <a href="https://en.wikipedia.org/wiki/Mullvad">track-record</a> than other VPN providers when it comes to privacy.
+				Mullvad VPN costs a flat rate of <a href="https://mullvad.net/en/pricing">€5 per month</a>; the same as it cost at its birth in 2009, and you can pay tracelessly in cash if you want.
+			</p>
+			<p>
+				Tor does an even better job than Mullvad, and it's free, but it's much more likely to cause errors on websites, once again because the sites are blocking people they can't track.
+				If you do need a truly anonymous browsing session for whatever reason, Tor with the Tor browser is the way to go, but in that case you should look at <a href="https://www.whonix.org/wiki/Documentation">these resources</a> before proceeding, because
+				anonymity is fragile even with the best tools available, and it relies on how you use those tools.
+			</p>
+			<p>
+				On mobile, you can again use Mullvad VPN for your device in general, although I've also had a pretty good experience using Vanadium over Tor with the <a href="https://github.com/guardianproject/orbot-android">Orbot</a> app.
+				If you're using Graphene OS, consider setting up another profile which uses Orbot, and see if the website-blocking tradeoff is worth it to you.
+				<a href="https://www.youtube.com/watch?v=IAoCfrqxIEg">Here's</a> a video on how to set that up.
+			</p>
+		</section>
+		
+		<h1 id="wrapup">Wrapping Up</h1>
+		<hr class="section-divider">
+		<section class="content-section">
+			<p>
+				Having gotten this far you've made meaningful and sustainable improvements to your privacy on all fronts. Congratulations!
+			</p>
+			<p>
+				If you have opinions, questions, or updates regarding this webpage, you can write them in the comments of the YouTube video, or contact me directly by email below!
+				If you found this video useful, please share it with someone you think could benefit from it.
+				The more we all put a little effort into showing we value privacy, the more that voice will be heard and supported, improving the situation for everybody.
+			</p>
+			<p>
+				Have a nice day, and thanks for reading!
+			</p>
+		</section>
+		
+		<h1 id="anon-inf">Anonymity Resources</h1>
+		<hr class="section-divider">
+		<section class="content-section">
+			<ul>
+				<li><a href="https://www.qubes-os.org/">Quebes OS</a></li>
+				<li><a href="https://tails.net/">Tails OS</a></li>
+				<li><a href="https://www.whonix.org/wiki/Documentation">Whonix Anonymity Documentation</a></li>
+			</ul>
+		</section>
+	</main>
+
+	<div id="footer-placeholder"></div>
+	<script src="js/includes.js"></script>
+	<script src="js/content-lightboxes.js"></script>
+	<script src="js/content-collapse.js"></script>
+</body>
+</html>
+
+
+<!--
+\[.+\] 
+
+			<img src="assets/images/content/om-query-menus.png" alt="Screenshot of customisation options">
+-->
