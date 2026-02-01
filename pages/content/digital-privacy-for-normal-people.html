@@ -12,7 +12,7 @@
 	<div id="header-placeholder"></div>
 
 	<main class="content-main">
-		<h2 class="warning">WARNING: I'm still refining this page and advice a bit, checking for things I may have overlooked. (Mainly in the OS section)</h2>
+		<h2 class="warning">WARNING: I'm still refining this page and its advice a bit, checking for things I may have overlooked.</h2>
 		<h1>Reclaim Your Digital Privacy</h1>
 		<hr class="section-divider">
 
@@ -162,14 +162,27 @@
 				by using other identifiers like your email and phone number, as well as whatever data they can scrape from your internet connection or browser.
 			</p>
 			<p>
-				You should never give out your phone number for account creation if at all possible, and reputable services will rarely require it.
+				For the services you've <i>already</i> linked together through a shared login like Google, your options for each service are:
+				<ol>
+					<li>Keep using the account, realising that it is linked with all others through the shared login;</li>
+					<li>Make a new account as described below, transfer important data to the new account, and delete the old account if possible.</li>
+				</ol>
+			</p>
+			<p>
+				You should never give out your phone number for account creation if at all possible, and privacy-respecting services will rarely require it.
+				An exception to this is that if a service involves payments, they will probably require a phone number for billing purposes.
+			</p>
+			<p>
+				Unfortunately, anonymous internet payments aren't really practical or accessible for most people anyway, so just be aware that when you
+				<i>do</i> give out your number (or indeed payment information!), companies can easily link up your activity associated with it, so do this sparingly.
+				As far as payments go, it's a good idea at least from a security standpoint to use different disposable virtual cards for each service, if your bank provides that option.
 			</p>
 			<h2 id="acc-email">Email</h2>
 			<p>
 				Another important mitigation technique for this kind of account correlation is to use DuckDuckGo's <a href="https://duckduckgo.com/duckduckgo-help-pages/email-protection/what-is-duckduckgo-email-protection">email service</a>.
-				You can generate a different random email to use for each account, and they all send the mail they receive to the email address you actually use, after removing trackers.
+				This lets you generate a different random email to use for each account, and they all send the mail they receive to the email address you actually use, after removing trackers.
 				Using a different email for each account makes it harder for them to be linked together, which is good for security as well as privacy. Other information you give to the site,
-				however, could still be used to identify you, and all of your activity will still of course be linked together under that random email.
+				however, could still be used to identify you, and all of your activity with a given account will still of course be linked together under that account's random email.
 			</p>
 			<p>
 				DuckDuckGo <a href="https://duckduckgo.com/email/privacy-terms">doesn't collect or store your data</a>.
@@ -179,18 +192,51 @@
 			</p>
 			<p>
 				Do note that email is <a href="https://www.whonix.org/wiki/E-Mail">inherently flawed</a>, and should not be considered private or secure.
-				If you want to communicate sensitive information to someone, you should use <a href="https://signal.org/">Signal</a> instead.
+				If you want to communicate sensitive information to someone, you should use <a href="https://signal.org/">Signal</a> instead,
+				but even Signal is only as safe as the operating system allows it to be. (More on that later.)
 			</p>
 			<p>
-				That said, I recommend you switch to <a href="https://account.proton.me/signup">ProtonMail</a>, which will offer a meaningful improvement to your privacy over the webmail most people use.
-				They offer a good free tier, strip some trackers from your emails, and are very user-friendly.
+				That said, I recommend you switch to <a href="https://account.proton.me/signup">ProtonMail</a> for the platform where you receive and read your mail, which will offer a meaningful improvement to your privacy over the webmail most people use.
+				They offer a good free tier, strip some more trackers from your emails, and are very user-friendly.
 				<a href="https://en.wikipedia.org/wiki/Comparison_of_webmail_providers">Unlike</a> Google, Outlook and Yahoo, they <a href="https://proton.me/mail/privacy-policy">don't</a> track or monetarily expliot the contents of your emails.
+				They also have a suite of other web services that may interest you to replace Google services. That includes collaborative document editing and storage.
 			</p>
 			<p>
-				They also have a suite of other web services that may interest you to replace Google services. That includes collaborative document editing and storage.
-				If you've already set up DuckDuckGo, you can now change the forwarding address to your proton address. Then set up a forwarding rule in Gmail or Outlook to route mail to a new random duck email.
+				If you've already set up DuckDuckGo to generate random duck emails, you can now change their forwarding address to your Proton account.
+				This means you will generate and give out a random duck email to each thing you sign up for, and then read all the mail you get in your Proton inbox.
+			</p>
+			<p>
+				To avoid losing track of email that is still being sent to your old account, you can set up a forwarding rule in Gmail or Outlook to route that mail to a new random duck address.
+			</p>
+			<a class="collapse">Forwarding From Gmail</a>
+			<div class="collapse-content">
+				<h2>How to Forward From Gmail</h2>
+				<hr class="section-divider">
+				
+				<p>The video below shows you how to set up forwarding from Gmail. Once you've verified that the forwarding arrangement is working as it should, you can tell Gmail to delete its own copy of your mail, as shown in the video.</p>
+				<p><b>Remember to use a new DuckDuckGo random email for the forwarding!</b></p>
+				<section class="video-section">
+				<iframe src="https://www.youtube.com/embed/Zhaa7ji8Oms?start=24"
+						title="Forwarding from Gmail"
+						allowfullscreen></iframe>
+				</section>
+			</div>
+			<a class="collapse">Forwarding From Outlook</a>
+			<div class="collapse-content">
+				<h2>How to Forward From Outlook</h2>
+				<hr class="section-divider">
+				
+				<p>The video below shows you how to set up forwarding from Outlook.</p>
+				<p><b>Remember to use a new DuckDuckGo random email for the forwarding!</b></p>
+				<section class="video-section">
+				<iframe src="https://www.youtube.com/embed/VRiRKAwpugw?start=8"
+						title="Forwarding from Gmail"
+						allowfullscreen></iframe>
+				</section>
+			</div>
+			<p>
 				Now all the mail you get to your old address will be sent on to your ProtonMail account with trackers removed. At this point you can continue, but whenever you now
-				get an email from your old address, go and switch the source account to use a new random duck email, to avoid Google seeing all of your mail as a man-in-the-middle.
+				get an email from your old address, go to the service that sent it, and switch it to use a new random duck email, to avoid Google seeing all of your mail as a man-in-the-middle.
 			</p>
 			<h2 id="acc-other">Other</h2>
 			<p>
